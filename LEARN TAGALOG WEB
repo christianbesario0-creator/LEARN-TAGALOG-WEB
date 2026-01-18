@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn Tagalog with [Your Name]</title>
+  <style>
+    /* Basic reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #023e8a; background-color: #f0f8ff; }
+
+    /* Header */
+    header {
+      background: linear-gradient(to right, #0077b6, #0096c7);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    header h1 { font-size: 3em; margin-bottom: 10px; }
+    header p { font-size: 1.2em; }
+
+    /* Navigation */
+    nav {
+      background-color: #023e8a;
+      display: flex;
+      justify-content: center;
+      padding: 15px 0;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    nav a:hover { color: #ffba08; }
+
+    /* Sections */
+    section { padding: 60px 20px; max-width: 1000px; margin: auto; }
+    h2 { color: #0077b6; font-size: 2em; margin-bottom: 20px; text-align: center; }
+    p, li { font-size: 1.1em; margin-bottom: 10px; }
+
+    /* Courses */
+    ul { list-style-type: square; padding-left: 20px; }
+    .cta { background-color: #ffba08; color: #023e8a; padding: 20px; text-align: center; font-size: 1.2em; margin-top: 20px; border-radius: 10px; cursor: pointer; transition: 0.3s; }
+    .cta:hover { background-color: #ffc857; }
+
+    /* Testimonials */
+    .testimonial { background-color: #e0f7fa; padding: 20px; margin: 15px 0; border-left: 5px solid #0077b6; border-radius: 5px; }
+
+    /* Contact Form */
+    form { display: flex; flex-direction: column; max-width: 500px; margin: auto; }
+    input, textarea { padding: 10px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ccc; font-size: 1em; }
+    button { background-color: #0077b6; color: white; padding: 12px; border: none; border-radius: 5px; font-size: 1.1em; cursor: pointer; transition: 0.3s; }
+    button:hover { background-color: #0096c7; }
+
+    /* Footer */
+    footer { background-color: #023e8a; color: white; text-align: center; padding: 20px; margin-top: 20px; }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 { font-size: 2em; }
+      nav a { margin: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Learn Tagalog with [Your Name]</h1>
+    <p>Fun, interactive, and effective Tagalog lessons for foreigners worldwide!</p>
+    <div class="cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book a Lesson Now</div>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#courses">Courses</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- About Me -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm [Your Name], a passionate Tagalog teacher. I help foreigners learn Filipino in a fun, easy, and practical way. Whether you want to chat with locals, travel around the Philippines, or connect with Filipino friends, I’m here to guide you step by step!</p>
+    <p>With years of teaching experience and a love for Filipino culture, I make learning Tagalog engaging, interactive, and personalized for each student.</p>
+  </section>
+
+  <!-- Courses -->
+  <section id="courses">
+    <h2>Courses</h2>
+    <ul>
+      <li><strong>Beginner:</strong> Greetings, basic phrases, numbers, and everyday conversation.</li>
+      <li><strong>Intermediate:</strong> More complex sentences, dialogues, and cultural tips.</li>
+      <li><strong>Advanced:</strong> Fluent communication, idioms, and local expressions.</li>
+    </ul>
+    <div class="cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book a Lesson Now!</div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <h2>Student Testimonials</h2>
+    <div class="testimonial">
+      <p>“Learning Tagalog with [Your Name] was fun and effective! I can now chat with my Filipino friends confidently.” – Maria, Spain</p>
+    </div>
+    <div class="testimonial">
+      <p>“The lessons are interactive and personalized. Highly recommended!” – John, USA</p>
+    </div>
+    <div class="testimonial">
+      <p>“I love how [Your Name] teaches culture along with the language. Makes learning so much easier.” – Emma, Australia</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Learn Tagalog with [Your Name]. All rights reserved.</p>
+  </footer>
+
+  <!-- Smooth scroll -->
+  <script>
+    const links = document.querySelectorAll('nav a, .cta');
+    links.forEach(link => {
+      link.addEventListener('click', e => {
+        if(link.hash) {
+          e.preventDefault();
+          document.querySelector(link.hash).scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
